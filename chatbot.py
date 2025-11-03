@@ -84,7 +84,6 @@ def main():
     if mensaje : 
         actualizar_historial("user", mensaje, "😎")
         chat_completo = configurar_modelo(clienteUsuario, elegirModelo, mensaje)
-        actualizar_historial("assistant", chat_completo, "🤖")
         if chat_completo:
             with st.chat_message("assistant"):
                 chat_completo = st.write_stream(generar_respuesta(chat_completo))
@@ -93,4 +92,5 @@ def main():
     
 if __name__ == "__main__":
     main()
+
     
